@@ -1,0 +1,92 @@
+[
+  {
+    "id": "python-basics",
+    "title": "Python Programming Fundamentals",
+    "description": "Introduction to Python programming language, covering variables, data types, control structures, functions, and basic object-oriented programming concepts essential for data science.",
+    "topics": ["variables", "data types", "functions", "loops", "conditionals", "classes"],
+    "url": "https://course.example.com/python-basics",
+    "difficulty": "beginner",
+    "module": 1
+  },
+  {
+    "id": "pandas-dataframes",
+    "title": "Data Manipulation with Pandas",
+    "description": "Comprehensive guide to using pandas library for data manipulation, including DataFrame operations, data cleaning, filtering, grouping, and merging datasets.",
+    "topics": ["pandas", "dataframe", "data cleaning", "filtering", "groupby", "merge"],
+    "url": "https://course.example.com/pandas-basics",
+    "difficulty": "intermediate",
+    "module": 2
+  },
+  {
+    "id": "numpy-arrays",
+    "title": "Numerical Computing with NumPy",
+    "description": "Understanding NumPy arrays, mathematical operations, broadcasting, linear algebra operations, and numerical computations for scientific computing.",
+    "topics": ["numpy", "arrays", "mathematical operations", "linear algebra", "broadcasting"],
+    "url": "https://course.example.com/numpy-intro",
+    "difficulty": "intermediate",
+    "module": 2
+  },
+  {
+    "id": "data-visualization",
+    "title": "Data Visualization with Matplotlib and Seaborn",
+    "description": "Creating effective data visualizations using matplotlib and seaborn libraries, including plots, charts, customization, and best practices for data presentation.",
+    "topics": ["matplotlib", "seaborn", "plotting", "charts", "visualization", "graphs"],
+    "url": "https://course.example.com/data-viz",
+    "difficulty": "intermediate",
+    "module": 3
+  },
+  {
+    "id": "jupyter-notebooks",
+    "title": "Jupyter Notebooks for Data Science",
+    "description": "Using Jupyter notebooks for interactive data analysis, including markdown documentation, code organization, and sharing reproducible research.",
+    "topics": ["jupyter", "notebooks", "interactive", "documentation", "reproducible research"],
+    "url": "https://course.example.com/jupyter-guide",
+    "difficulty": "beginner",
+    "module": 1
+  },
+  {
+    "id": "web-scraping",
+    "title": "Web Scraping and Data Collection",
+    "description": "Techniques for collecting data from websites using requests, BeautifulSoup, and handling various data formats including HTML, JSON, and APIs.",
+    "topics": ["web scraping", "requests", "beautifulsoup", "apis", "json", "html"],
+    "url": "https://course.example.com/web-scraping",
+    "difficulty": "advanced",
+    "module": 4
+  },
+  {
+    "id": "databases-sql",
+    "title": "Database Operations and SQL",
+    "description": "Working with databases in Python, SQL query fundamentals, connecting to databases, and performing CRUD operations for data science projects.",
+    "topics": ["sql", "databases", "sqlite", "queries", "crud operations", "data storage"],
+    "url": "https://course.example.com/databases-sql",
+    "difficulty": "intermediate",
+    "module": 3
+  },
+  {
+    "id": "machine-learning-intro",
+    "title": "Introduction to Machine Learning",
+    "description": "Basic machine learning concepts, supervised and unsupervised learning, model evaluation, and using scikit-learn for common ML tasks.",
+    "topics": ["machine learning", "scikit-learn", "supervised learning", "unsupervised learning", "model evaluation"],
+    "url": "https://course.example.com/ml-intro",
+    "difficulty": "advanced",
+    "module": 5
+  },
+  {
+    "id": "statistics-basics",
+    "title": "Statistical Analysis for Data Science",
+    "description": "Essential statistical concepts including descriptive statistics, probability distributions, hypothesis testing, and statistical inference using Python.",
+    "topics": ["statistics", "probability", "hypothesis testing", "distributions", "statistical inference"],
+    "url": "https://course.example.com/statistics",
+    "difficulty": "intermediate",
+    "module": 3
+  },
+  {
+    "id": "version-control",
+    "title": "Version Control with Git",
+    "description": "Using Git for version control in data science projects, collaboration workflows, branching strategies, and integrating with platforms like GitHub.",
+    "topics": ["git", "version control", "github", "collaboration", "branching", "repositories"],
+    "url": "https://course.example.com/git-basics",
+    "difficulty": "beginner",
+    "module": 1
+  }
+]

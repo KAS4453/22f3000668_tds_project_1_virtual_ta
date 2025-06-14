@@ -1,0 +1,126 @@
+[
+  {
+    "id": 12345,
+    "title": "How to handle missing values in pandas DataFrame?",
+    "slug": "handle-missing-values-pandas-dataframe",
+    "category_id": 5,
+    "created_at": "2025-02-15T10:30:00.000Z",
+    "posts_count": 8,
+    "url": "https://discourse.onlinedegree.iitm.ac.in/t/handle-missing-values-pandas-dataframe/12345",
+    "content": "I'm working with a dataset that has several missing values. What are the best practices for handling missing data in pandas? Should I use dropna(), fillna(), or interpolate()? When should I use each method?",
+    "replies": [
+      {
+        "id": 12346,
+        "username": "data_guru",
+        "created_at": "2025-02-15T11:15:00.000Z",
+        "content": "Great question! The choice depends on your data and analysis goals. Use dropna() when you have plenty of data and missing values are truly random. Use fillna() with mean/median for numerical data or mode for categorical. Interpolate() works well for time series data."
+      },
+      {
+        "id": 12347,
+        "username": "student_helper",
+        "created_at": "2025-02-15T12:00:00.000Z",
+        "content": "I usually check the percentage of missing values first. If it's less than 5%, dropping might be okay. For higher percentages, imputation is better. Also consider using df.isnull().sum() to understand the pattern of missing data."
+      }
+    ],
+    "tags": ["pandas", "missing-data", "data-cleaning"],
+    "username": "curious_student"
+  },
+  {
+    "id": 12348,
+    "title": "Error installing matplotlib on Windows",
+    "slug": "error-installing-matplotlib-windows",
+    "category_id": 3,
+    "created_at": "2025-01-28T09:45:00.000Z",
+    "posts_count": 12,
+    "url": "https://discourse.onlinedegree.iitm.ac.in/t/error-installing-matplotlib-windows/12348",
+    "content": "I'm getting an error while trying to install matplotlib using pip. The error message mentions something about Microsoft Visual C++ 14.0. How can I resolve this installation issue?",
+    "replies": [
+      {
+        "id": 12349,
+        "username": "tech_support",
+        "created_at": "2025-01-28T10:20:00.000Z",
+        "content": "This is a common issue on Windows. You need to install Microsoft Visual C++ Build Tools. Alternatively, try using conda instead of pip: conda install matplotlib. Conda comes with pre-compiled binaries that avoid compilation issues."
+      },
+      {
+        "id": 12350,
+        "username": "windows_user",
+        "created_at": "2025-01-28T11:30:00.000Z",
+        "content": "I had the same problem. Installing Anaconda Distribution solved it for me. It comes with matplotlib pre-installed along with other data science packages. Much easier than dealing with individual package installations."
+      }
+    ],
+    "tags": ["matplotlib", "installation", "windows", "troubleshooting"],
+    "username": "struggling_coder"
+  },
+  {
+    "id": 12351,
+    "title": "Best practices for Jupyter notebook organization",
+    "slug": "jupyter-notebook-organization-best-practices",
+    "category_id": 7,
+    "created_at": "2025-03-10T14:20:00.000Z",
+    "posts_count": 6,
+    "url": "https://discourse.onlinedegree.iitm.ac.in/t/jupyter-notebook-organization-best-practices/12351",
+    "content": "My Jupyter notebooks are becoming messy and hard to follow. What are some best practices for organizing code, markdown, and outputs in notebooks? How should I structure my data science projects?",
+    "replies": [
+      {
+        "id": 12352,
+        "username": "data_scientist_pro",
+        "created_at": "2025-03-10T15:00:00.000Z",
+        "content": "Use clear markdown headers to create sections. Keep cells focused on single tasks. Add explanatory text before complex code. Use meaningful variable names. Consider splitting large notebooks into smaller, focused ones."
+      },
+      {
+        "id": 12353,
+        "username": "notebook_expert",
+        "created_at": "2025-03-10T16:15:00.000Z",
+        "content": "Follow a consistent structure: 1) Introduction and objectives 2) Data loading and exploration 3) Data cleaning 4) Analysis/modeling 5) Results and conclusions. Use cell tags and table of contents extensions for better navigation."
+      }
+    ],
+    "tags": ["jupyter", "best-practices", "organization", "data-science"],
+    "username": "organized_analyst"
+  },
+  {
+    "id": 12354,
+    "title": "How to create interactive plots with seaborn?",
+    "slug": "interactive-plots-seaborn",
+    "category_id": 6,
+    "created_at": "2025-02-22T11:10:00.000Z",
+    "posts_count": 4,
+    "url": "https://discourse.onlinedegree.iitm.ac.in/t/interactive-plots-seaborn/12354",
+    "content": "I want to create interactive plots that users can hover over to see data points. Is this possible with seaborn? Or should I use a different library like plotly?",
+    "replies": [
+      {
+        "id": 12355,
+        "username": "viz_expert",
+        "created_at": "2025-02-22T12:30:00.000Z",
+        "content": "Seaborn is primarily for static plots. For interactivity, plotly is your best bet. You can create similar statistical plots with plotly.express. Alternatively, use matplotlib with mpldatacursor for basic hover functionality."
+      }
+    ],
+    "tags": ["seaborn", "interactive", "visualization", "plotly"],
+    "username": "visual_learner"
+  },
+  {
+    "id": 12356,
+    "title": "Understanding pandas groupby operations",
+    "slug": "understanding-pandas-groupby-operations",
+    "category_id": 5,
+    "created_at": "2025-03-05T13:45:00.000Z",
+    "posts_count": 10,
+    "url": "https://discourse.onlinedegree.iitm.ac.in/t/understanding-pandas-groupby-operations/12356",
+    "content": "I'm confused about how groupby works in pandas. Can someone explain the split-apply-combine paradigm with practical examples? When should I use agg() vs apply() vs transform()?",
+    "replies": [
+      {
+        "id": 12357,
+        "username": "pandas_master",
+        "created_at": "2025-03-05T14:20:00.000Z",
+        "content": "Think of groupby as three steps: 1) Split data into groups 2) Apply function to each group 3) Combine results. Use agg() for summary statistics, apply() for custom functions, transform() when you need same shape output as input."
+      },
+      {
+        "id": 12358,
+        "username": "data_teacher",
+        "created_at": "2025-03-05T15:10:00.000Z",
+        "content": "Here's a simple example: df.groupby('category').agg({'price': 'mean', 'quantity': 'sum'}). This groups by category and calculates mean price and sum of quantity for each group. Very powerful for data analysis!"
+      }
+    ],
+    "tags": ["pandas", "groupby", "data-analysis", "aggregation"],
+    "username": "groupby_learner"
+  }
+]
