@@ -1,0 +1,126 @@
+Core Functionalities
+POST API Endpoint (/api/)
+
+Accepts a JSON request containing:
+
+question (string): Student's textual question.
+
+image (optional, base64-encoded): Image containing the question.
+
+Returns:
+
+answer (string): Best possible answer.
+
+links (list): Relevant URLs from Discourse or course content.
+
+Base64 Image Processing
+
+If an image is provided:
+
+Decodes base64.
+
+Performs OCR (Optical Character Recognition) using pytesseract or similar.
+
+Extracts text and merges with the question for answer generation.
+
+Discourse Scraper
+
+Fetches posts from TDS Discourse forum between given dates.
+
+Stores results in a local file data/tds_posts.json.
+
+Supports:
+
+Pagination
+
+Thread title and post content extraction
+
+Date filtering
+
+Course Content Loader
+
+Reads course material from data/course_content.json.
+
+Indexes or embeds content for retrieval.
+
+Question-Answer Matching Engine
+
+Uses:
+
+Text similarity (e.g. cosine similarity, fuzzy matching)
+
+Semantic embedding comparison (e.g. OpenAI or HuggingFace models)
+
+Matches the student question with:
+
+Discourse content
+
+Course content
+
+Answer Generator
+
+Synthesizes a concise response from the best-matched entries.
+
+Selects the top N relevant links and adds them to the response.
+
+Supports fallback and confidence-based logic.
+
+Response Timeout Handling
+
+Entire processing capped under 30 seconds.
+
+Asynchronous code where needed to ensure promptness.
+
+🛠️ Development & Infrastructure Features
+FastAPI Backend
+
+Lightweight and scalable framework.
+
+OpenAPI/Swagger documentation automatically available.
+
+Project Structure
+
+Organized folders for:
+
+Code (main.py, qa_engine.py)
+
+Data (data/)
+
+Scripts (scrape_discourse.py)
+
+Configs (vercel.json, requirements.txt)
+
+Vercel-Compatible Deployment
+
+vercel.json with:
+
+Entry point
+
+Runtime config
+
+Build settings
+
+MIT License & GitHub Integration
+
+Public GitHub repo with LICENSE file for compliance.
+
+🧪 Evaluation Ready
+Promptfoo-Compatible
+
+Accepts promptfoo eval testing via:
+
+bash
+Copy
+Edit
+npx -y promptfoo eval --config project-tds-virtual-ta-promptfoo.yaml
+Can respond accurately to 10 test cases under evaluation.
+
+🏆 Bonus Feature
+Date-Range Discourse Scraper (Bonus Criteria)
+
+Custom script supports:
+
+bash
+Copy
+Edit
+python scrape_discourse.py --start 2025-01-01 --end 2025-04-14

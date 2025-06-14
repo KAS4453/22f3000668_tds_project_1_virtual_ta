@@ -1,0 +1,118 @@
+description: "TDS Virtual TA Evaluation - Testing question answering capabilities"
+
+providers:
+  - id: tds-virtual-ta
+    config:
+      url: "http://localhost:5000/api/"
+      method: POST
+      headers:
+        Content-Type: application/json
+      body:
+        question: "{{prompt}}"
+
+tests:
+  - description: "Test pandas DataFrame missing values handling"
+    vars:
+      prompt: "How do I handle missing values in pandas DataFrame?"
+    assert:
+      - type: contains
+        value: "pandas"
+      - type: contains
+        value: "missing"
+      - type: javascript
+        value: "output.links && output.links.length > 0"
+
+  - description: "Test matplotlib installation issues"
+    vars:
+      prompt: "I'm getting an error installing matplotlib on Windows"
+    assert:
+      - type: contains
+        value: "matplotlib"
+      - type: contains
+        value: "install"
+      - type: javascript
+        value: "output.links && output.links.length > 0"
+
+  - description: "Test Jupyter notebook organization"
+    vars:
+      prompt: "What are the best practices for organizing Jupyter notebooks?"
+    assert:
+      - type: contains
+        value: "jupyter"
+      - type: contains
+        value: "notebook"
+      - type: javascript
+        value: "output.answer.length > 50"
+
+  - description: "Test seaborn interactive plots"
+    vars:
+      prompt: "How can I create interactive plots with seaborn?"
+    assert:
+      - type: contains
+        value: "seaborn"
+      - type: contains
+        value: "plot"
+      - type: javascript
+        value: "output.links && output.links.length > 0"
+
+  - description: "Test pandas groupby operations"
+    vars:
+      prompt: "Can you explain pandas groupby operations?"
+    assert:
+      - type: contains
+        value: "groupby"
+      - type: contains
+        value: "pandas"
+      - type: javascript
+        value: "output.answer.length > 100"
+
+  - description: "Test Python basics question"
+    vars:
+      prompt: "What are the fundamental concepts in Python programming?"
+    assert:
+      - type: contains
+        value: "python"
+      - type: javascript
+        value: "output.answer.length > 50"
+
+  - description: "Test NumPy arrays question"
+    vars:
+      prompt: "How do I work with NumPy arrays for mathematical operations?"
+    assert:
+      - type: contains
+        value: "numpy"
+      - type: contains
+        value: "array"
+      - type: javascript
+        value: "output.links && output.links.length > 0"
+
+  - description: "Test data visualization question"
+    vars:
+      prompt: "What are the best practices for data visualization?"
+    assert:
+      - type: contains
+        value: "visualization"
+      - type: javascript
+        value: "output.answer.length > 80"
+
+  - description: "Test web scraping question"
+    vars:
+      prompt: "How do I scrape data from websites using Python?"
+    assert:
+      - type: contains
+        value: "scraping"
+      - type: contains
+        value: "python"
+      - type: javascript
+        value: "output.links && output.links.length > 0"
+
+  - description: "Test machine learning question"
+    vars:
+      prompt: "What is machine learning and how do I get started?"
+    assert:
+      - type: contains
+        value: "machine learning"
+      - type: javascript
+        value: "output.answer.length > 100"
+
+outputPath: ./promptfoo_results.json
