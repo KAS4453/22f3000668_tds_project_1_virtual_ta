@@ -15,8 +15,8 @@
   "env": {
     "PYTHONPATH": "."
   },
-  "functions": {Add commentMore actions
-    "main.py": {Add commentMore actions
+  "functions": {
+    "main.py": {
       "runtime": "python3.9"
     }
   }
