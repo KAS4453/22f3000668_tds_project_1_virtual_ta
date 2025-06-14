@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "main.py",
-      "use": "@vercel/python"
+  "functions": {
+    "main.py": {
+      "runtime": "python3.9"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/(.*)",
@@ -14,10 +13,5 @@
   ],
   "env": {
     "PYTHONPATH": "."
-  },
-  "functions": {
-    "main.py": {
-      "runtime": "python3.9"
-    }
   }
 }
