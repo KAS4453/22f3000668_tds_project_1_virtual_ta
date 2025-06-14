@@ -1,17 +1,23 @@
 {
-  "functions": {
-    "main.py": {
-      "runtime": "python3.11",
-      "maxDuration": 30
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/main.py"
+      "dest": "main.py"
     }
   ],
   "env": {
     "PYTHONPATH": "."
+  },
+  "functions": {Add commentMore actions
+    "main.py": {Add commentMore actions
+      "runtime": "python3.9"
+    }
   }
 }
